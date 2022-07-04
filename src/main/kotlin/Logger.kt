@@ -4,8 +4,9 @@ class Logger(private val name: String) {
     }
 }
 
-fun store(s: String, logger: Logger){
-    logger.log("Stored $s on disk")
+// it works, but architecturally what do you think the name is correct?
+fun Logger.store(s: String){
+    log("Stored $s on disk")
 }
 
 fun main() {
