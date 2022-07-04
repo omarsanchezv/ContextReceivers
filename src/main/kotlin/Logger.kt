@@ -4,16 +4,13 @@ class Logger(private val name: String) {
     }
 }
 
-class Api {
-    fun get(): String = "Hello, World"
+fun store(s: String, logger: Logger){
+    logger.log("Stored $s on disk")
 }
 
 fun main() {
     val logger = Logger("main")
-    val api = Api()
-    with(logger) {
-        with(api) {
-            log(get())
-        }
-    }
+    store("an image", logger)
+    store("a text file", logger)
+    store("a chese burger", logger)
 }
