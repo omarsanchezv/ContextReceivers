@@ -10,7 +10,9 @@ fun store(s: String, logger: Logger){
 
 fun main() {
     val logger = Logger("main")
-    store("an image", logger)
-    store("a text file", logger)
-    store("a chese burger", logger)
+    with(logger) {
+        store("an image")
+        store("a text file")
+        store("a chese burger")
+    }
 }
