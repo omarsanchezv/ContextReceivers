@@ -4,8 +4,9 @@ class Logger(private val name: String) {
     }
 }
 
-// it works, but architecturally what do you think the name is correct?
-fun Logger.store(s: String){
+//now it is look like the store can be called when the logger is present, and it can be called only in that context
+context (Logger)
+fun store(s: String){
     log("Stored $s on disk")
 }
 
@@ -14,6 +15,6 @@ fun main() {
     with(logger) {
         store("an image")
         store("a text file")
-        store("a chese burger")
+        store("a cheese burger")
     }
 }
