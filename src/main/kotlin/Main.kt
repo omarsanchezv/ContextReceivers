@@ -1,4 +1,5 @@
 import kotlin.random.Random
+
 //Example from kotlin Jetbrains
 fun main(args: Array<String>) {
     println("Hello, World!".sarcastic())
