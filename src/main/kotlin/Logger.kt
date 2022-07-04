@@ -10,7 +10,9 @@ class Api {
 
 fun main() {
     val logger = Logger("main")
-    logger.log("log 1")
-    logger.log("log 2")
-    logger.log("log 3")
+    with(logger) {
+       log("log 1")
+       log("log 2")
+       log("log 3")
+    }
 }
